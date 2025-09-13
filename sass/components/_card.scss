@@ -1,0 +1,96 @@
+.card {
+    position: relative;
+    perspective: 150rem;
+    height: 52rem;
+
+    &__side {
+        background-color: aliceblue;
+        width: 25rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        height: 52rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+
+        &--front {}
+
+        &--back {
+            background-color: orange;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &__picture {
+        background-size: cover;
+
+        height: 23rem;
+
+        &--1 {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0.349), rgba(0, 0, 255, 0.452)), url('../img/tom-barrett-M0AWNxnLaMw-unsplash\ \(1\).jpg');
+
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0.349), rgba(0, 0, 255, 0.452)), url('../img/mesut-kaya-bCwgFb-llPs-unsplash.jpg');
+
+        }
+
+    }
+
+    &__heading {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        color: aliceblue;
+        font-size: 2.5rem;
+        padding: 2rem 0rem;
+    }
+
+    &__heading-span {
+        background-color: rgba(0, 255, 255, 0.404);
+
+        &--1 {}
+    }
+
+    &__details ul {
+        list-style: none;
+        padding: 3rem 0rem;
+
+        li {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__cta {
+        position: relative;
+        height: 100%;
+    }
+
+    &__price-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+       transform: translate(-50% , -50%);
+    }
+    &__price-only{
+        font-size: 2rem;
+        color: green;
+
+    }
+    &__price-value{
+        font-size: 3rem;
+        color: aliceblue;
+    }
+}

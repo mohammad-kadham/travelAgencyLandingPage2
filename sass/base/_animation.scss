@@ -1,0 +1,61 @@
+@keyframes inFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+  
+    100%{
+       opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes inFromLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+  
+    100%{
+       opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(150%);
+    }
+    
+}
+@keyframes animate1-r {
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes animate2 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-150%);
+    }
+    
+
+}
+@keyframes animate2-r {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
+
+}

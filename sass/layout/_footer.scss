@@ -1,0 +1,42 @@
+@use '../abstracts/mixins' as *;
+.footer{
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 5rem;
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &__logo img{
+        width: 15rem;
+        height: auto;
+       
+    }
+    &__row{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include respond(port-tab){
+            flex-direction: column-reverse;
+        }
+    }
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &__item{
+       
+        margin-right: 1rem;
+        &:hover{
+            background-color: aqua;
+        }
+    }
+    &__link,&__link:visited,&__link:active{
+        font-size: 2rem;
+        color: aliceblue;
+        text-decoration: none;
+        @include respond(phone){
+            font-size: 1rem;
+        }
+    }
+}

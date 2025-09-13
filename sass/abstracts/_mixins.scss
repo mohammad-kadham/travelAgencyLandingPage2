@@ -1,0 +1,19 @@
+@mixin respond($breakpoint){
+   
+    @if $breakpoint == land-tab {
+        @media (max-width:1200px) {
+            @content
+        }
+    }
+     @if $breakpoint == port-tab {
+        @media (max-width:900px) {
+            @content
+        }
+    }
+     @if $breakpoint == phone{
+       @media (max-width:600px){
+        @content
+       }
+    }
+   
+}

@@ -1,0 +1,45 @@
+
+
+@use '../abstracts/mixins' as *;
+
+.heading-primary{
+  
+    color: aliceblue;
+    &--main{
+        display: block;
+         font-size: 5rem;
+        animation-name: inFromRight;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+        animation-delay: 1s;
+    }
+    &--sub{
+         display: block;
+       font-size: 3rem;
+        animation-name: inFromLeft;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+        animation-delay: 1s;
+    }
+   
+}
+
+.heading-secondary{
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+   background-image: linear-gradient(to right,blue,red); 
+    display: inline-block;
+    background-clip: text;
+    transition: all 0.3s;
+
+    @include respond(land-tab){
+        font-size: 3rem;
+    }
+    &:hover{
+        color: rgba(0, 0, 0, 0);
+            background-image: linear-gradient(to right,blue,red); 
+    }
+    
+}

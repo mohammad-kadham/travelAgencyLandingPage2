@@ -1,0 +1,28 @@
+.btn{
+    &,&:link,&:visited{
+        font-size: 2.5rem;
+        font-family: inherit;
+        text-decoration: none;
+        color: brown;
+        padding: 0.4rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.09s ease-in-out;
+        box-shadow: 1px 1px 1rem black;
+    }
+    &:hover{
+        transform: translateY(-0.3rem);
+          box-shadow: 1px 5px 2rem black;
+    }
+    &:active{
+        outline: none;
+       transform: translateY(0.1rem);
+        box-shadow: 1px 5px 1rem black;
+    }
+
+    &--white{
+        background-color: white;
+    }
+}

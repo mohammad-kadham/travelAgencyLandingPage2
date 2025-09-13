@@ -1,0 +1,54 @@
+@use '../abstracts/mixins' as *;
+
+.composition {
+    position: relative;
+    padding: 10rem 0rem;
+
+    &__photo {
+        width: 25%;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        background-color: aquamarine;
+        box-shadow: 1px 3px 5px black;
+@include respond(port-tab){
+    width: 50%;
+}
+        &--p1 {
+            animation-direction: reverse;
+            animation: animate1-r 2s;
+            animation-fill-mode: forwards;
+
+        }
+
+        &--p2 {
+            animation: animate2-r 2s;
+        }
+
+        &--p3 {
+            transition: all 0.1s;
+        }
+
+
+    }
+
+    &:hover &__photo--p1 {
+        animation-direction: normal;
+        animation: animate1 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+    }
+
+    &:hover &__photo--p2 {
+        animation-delay: 1s;
+        animation: animate2 2s;
+        animation-fill-mode: forwards;
+    }
+
+    &:hover &__photo--p3 {
+
+        transform: scale(1.2);
+        animation-delay: 1s;
+    }
+    
+}
